@@ -1,7 +1,6 @@
 package com.nelioalves.cursomc.resources;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nelioalves.cursomc.domain.Categoria;
 import com.nelioalves.cursomc.services.CategoriaService;
+
+//CAMADA DE CONTROLE --> CHAMA A DE SERVIÇO
 
 @RestController
 @RequestMapping(value="/categorias")

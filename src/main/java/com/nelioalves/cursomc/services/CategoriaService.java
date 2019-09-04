@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.nelioalves.cursomc.domain.Categoria;
 import com.nelioalves.cursomc.repositories.CategoriaRepository;
 
+//CAMADA DE SERVIÇO  CHAMA  A DE REPOSITORIO
 @Service
 public class CategoriaService {
 	

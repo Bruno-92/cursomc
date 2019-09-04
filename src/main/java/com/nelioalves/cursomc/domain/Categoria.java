@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+//CAMADA DE MODELO
+
 @Entity
 public class Categoria implements Serializable {
 
