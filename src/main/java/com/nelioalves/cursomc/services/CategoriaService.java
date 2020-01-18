@@ -1,5 +1,6 @@
 package com.nelioalves.cursomc.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,12 @@ import com.nelioalves.cursomc.repositories.CategoriaRepository;
 import com.nelioalves.cursomc.services.exceptions.DataIntegrityException;
 import com.nelioalves.cursomc.services.exceptions.ObjectNotFoundException;
 
-//CAMADA DE SERVIÇO  CHAMA  A DE REPOSITORIO
+//##subordinada da camada resources##
+/*CAMADA DE SERVIÇO  CHAMA  A DE REPOSITORIO
+ AQUI É FEITO AS FUNÇÕES(MÉTODOS) E FUNÇÕES DAQUI SÃO REQUISITADAS POR RESOURCES PARA A BUSCA NO BANCO DE DADOS (DOMAIN)
+ ENVIANDO O REQUERIMENTO PARA O REPOSITORY FAZER A BUSCA,E RETORNANDO O RESULTADO PARA
+ RESOURCES.
+*/
 @Service
 public class CategoriaService {
 	
@@ -43,6 +49,10 @@ public class CategoriaService {
 		catch (DataIntegrityViolationException e) {
 			throw new DataIntegrityException("Não é Possivel excluir Uma categoria que Possue produtos");
 		}
+	}
+	
+	public List<Categoria> findAll() {
+		return repo.findAll();
 		
 	}
 }
